@@ -1,0 +1,456 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+  <!-- TODO: XXX为测试模块名 -->
+  <title>rtspPlayerTest</title>
+  <!-- 引入样式表 -->
+  <link rel="stylesheet" href="css/base.css">
+  <!-- 引入业务逻辑代码，勿动 -->
+  <script type="text/javascript" src="js/test.control.js"></script>
+
+  <!-- TODO：引入的geobos前端文件 -->
+  <script type="text/javascript" src="lib/js/GeoBOS.min.js"></script>
+  <script type="text/javascript" src="lib/js/GeoBOS.rtspPlayer.min.js"></script>
+
+  <!-- TODO：测试代码 -->
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="js/vconsole.min.js"></script>
+  <script>
+    var vConsole = new VConsole();
+    console.log('Hello world');
+  </script>
+</head>
+
+<body>
+  <div id="rtsp-contain"></div>
+  <!-- TODO: XXX为测试模块名 -->
+  <div class='title'>rstpPlayerTest</div>
+  <!-- 分割线 -->
+  <div class="divided-line"></div>
+
+  <!-- 测试部分 -->
+  <div class="test-body">
+
+    <!-- 自动测试方法 -->
+    <div class="test-panel">
+      <!-- header -->
+      <div class="test-header">
+        <!-- TODO: title -->
+        <span>init</span>
+        <!-- run -->
+        <div class="test-run" onclick="geobosTestList['init']()">RUN</div>
+      </div>
+
+      <!-- TODO: 测试结果 -->
+      <div class="test-line">
+        <!-- 结果 -->
+        <span>测试结果:</span>
+        <!-- 命名以方法名开头Result结尾 -->
+        <!-- 请保留此字段:onclick="showResultDetails(this) -->
+        <div class="test-result" id="initResult" onclick="showResultDetails(this)"></div>
+      </div>
+
+      <!-- TODO: 提示区 -->
+      <!-- 根据需要添加 -->
+      <div class="test-line">
+        <p class="font-color-red">注：该方法测试模块打开视频。</p>
+      </div>
+      <div class="test-line">
+        <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+      </div>
+
+      <!-- 分割线 -->
+      <div class="divided-line"></div>
+    </div>
+
+    <!-- 自动测试方法 -->
+    <div class="test-panel">
+      <!-- header -->
+      <div class="test-header">
+        <!-- TODO: title -->
+        <span>getVersion</span>
+        <!-- run -->
+        <div class="test-run" onclick="geobosTestList['getVersion']()">RUN</div>
+      </div>
+      <!-- TODO: 测试结果 -->
+      <div class="test-line">
+        <!-- 结果 -->
+        <span>测试结果:</span>
+        <!-- 命名以方法名开头Result结尾 -->
+        <!-- 请保留此字段:onclick="showResultDetails(this) -->
+        <div class="test-result" id="getVersionResult" onclick="showResultDetails(this)"></div>
+      </div>
+
+      <!-- TODO: 提示区 -->
+      <!-- 根据需要添加 -->
+      <div class="test-line">
+        <p class="font-color-red">注：该方法测试返回版本。</p>
+      </div>
+      <div class="test-line">
+        <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+      </div>
+
+      <!-- 分割线 -->
+      <div class="divided-line"></div>
+    </div>
+
+    <!-- 自动测试方法 -->
+    <div class="test-panel">
+      <!-- header -->
+      <div class="test-header">
+        <!-- TODO: title -->
+        <span>getBuildTime</span>
+        <!-- run -->
+        <div class="test-run" onclick="geobosTestList['getBuildTime']()">RUN</div>
+      </div>
+      <!-- TODO: 测试结果 -->
+      <div class="test-line">
+        <!-- 结果 -->
+        <span>测试结果:</span>
+        <!-- 命名以方法名开头Result结尾 -->
+        <!-- 请保留此字段:onclick="showResultDetails(this) -->
+        <div class="test-result" id="getBuildTimeResult" onclick="showResultDetails(this)"></div>
+      </div>
+
+      <!-- TODO: 提示区 -->
+      <!-- 根据需要添加 -->
+      <div class="test-line">
+        <p class="font-color-red">注：该方法测试返回创建时间。</p>
+      </div>
+      <div class="test-line">
+        <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+      </div>
+
+      <!-- 分割线 -->
+      <div class="divided-line"></div>
+    </div>
+
+      <!-- 自动测试方法 -->
+      <div class="test-panel">
+          <!-- header -->
+          <div class="test-header">
+              <!-- TODO: title -->
+              <span>getRate</span>
+              <!-- run -->
+              <div class="test-run" onclick="geobosTestList['getRate']()">RUN</div>
+          </div>
+          <!-- TODO: 测试结果 -->
+          <div class="test-line">
+              <!-- 结果 -->
+              <span>测试结果:</span>
+              <!-- 命名以方法名开头Result结尾 -->
+              <!-- 请保留此字段:onclick="showResultDetails(this) -->
+              <div class="test-result" id="getRateResult" onclick="showResultDetails(this)"></div>
+          </div>
+
+          <!-- TODO: 提示区 -->
+          <!-- 根据需要添加 -->
+          <div class="test-line">
+              <p class="font-color-red">注：该方法测试返回创建时间。</p>
+          </div>
+          <div class="test-line">
+              <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+          </div>
+
+          <!-- 分割线 -->
+          <div class="divided-line"></div>
+      </div>
+
+      <!-- 自动测试方法 -->
+      <div class="test-panel">
+          <!-- header -->
+          <div class="test-header">
+              <!-- TODO: title -->
+              <span>getResolution</span>
+              <!-- run -->
+              <div class="test-run" onclick="geobosTestList['getResolution']()">RUN</div>
+          </div>
+          <!-- TODO: 测试结果 -->
+          <div class="test-line">
+              <!-- 结果 -->
+              <span>测试结果:</span>
+              <!-- 命名以方法名开头Result结尾 -->
+              <!-- 请保留此字段:onclick="showResultDetails(this) -->
+              <div class="test-result" id="getResolutionResult" onclick="showResultDetails(this)"></div>
+          </div>
+
+          <!-- TODO: 提示区 -->
+          <!-- 根据需要添加 -->
+          <div class="test-line">
+              <p class="font-color-red">注：该方法测试返回创建时间。</p>
+          </div>
+          <div class="test-line">
+              <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+          </div>
+
+          <!-- 分割线 -->
+          <div class="divided-line"></div>
+      </div>
+
+      <div class="test-panel">
+          <!-- header -->
+          <div class="test-header">
+              <!-- TODO: title -->
+              <span>setSurfacesize</span>
+              <!-- run -->
+              <div class="test-run" onclick="geobosTestList['setSurfacesize']()">RUN</div>
+          </div>
+          <!-- TODO: 测试结果 -->
+          <div class="test-line">
+              <!-- 结果 -->
+              <span>测试结果:</span>
+              <!-- 命名以方法名开头Result结尾 -->
+              <!-- 请保留此字段:onclick="showResultDetails(this) -->
+              <div class="test-result" id="setSurfacesizeResult" onclick="showResultDetails(this)"></div>
+          </div>
+
+          <!-- TODO: 提示区 -->
+          <!-- 根据需要添加 -->
+          <div class="test-line">
+              <p class="font-color-red">注：该方法测试返回创建时间。</p>
+          </div>
+          <div class="test-line">
+              <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+          </div>
+
+          <!-- 分割线 -->
+          <div class="divided-line"></div>
+      </div>
+
+      <div class="test-panel">
+          <!-- header -->
+          <div class="test-header">
+              <!-- TODO: title -->
+              <span>setSurfaceposition</span>
+              <!-- run -->
+              <div class="test-run" onclick="geobosTestList['setSurfaceposition']()">RUN</div>
+          </div>
+          <!-- TODO: 测试结果 -->
+          <div class="test-line">
+              <!-- 结果 -->
+              <span>测试结果:</span>
+              <!-- 命名以方法名开头Result结尾 -->
+              <!-- 请保留此字段:onclick="showResultDetails(this) -->
+              <div class="test-result" id="setSurfacepositionResult" onclick="showResultDetails(this)"></div>
+          </div>
+
+          <!-- TODO: 提示区 -->
+          <!-- 根据需要添加 -->
+          <div class="test-line">
+              <p class="font-color-red">注：该方法测试返回创建时间。</p>
+          </div>
+          <div class="test-line">
+              <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+          </div>
+
+          <!-- 分割线 -->
+          <div class="divided-line"></div>
+      </div>
+
+    <!-- 自动测试方法 -->
+    <div class="test-panel">
+      <!-- header -->
+      <div class="test-header">
+        <!-- TODO: title -->
+        <span>exit</span>
+        <!-- run -->
+        <div class="test-run" onclick="geobosTestList['exit']()">RUN</div>
+      </div>
+
+      <!-- TODO: 测试结果 -->
+      <div class="test-line">
+        <!-- 结果 -->
+        <span>测试结果:</span>
+        <!-- 命名以方法名开头Result结尾 -->
+        <!-- 请保留此字段:onclick="showResultDetails(this) -->
+        <div class="test-result" id="onExitResult" onclick="showResultDetails(this)"></div>
+      </div>
+
+      <!-- TODO: 提示区 -->
+      <!-- 根据需要添加 -->
+      <div class="test-line">
+        <p class="font-color-red">注：该方法测试播放界面退出。</p>
+      </div>
+      <div class="test-line">
+        <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+      </div>
+
+      <!-- 分割线 -->
+      <div class="divided-line"></div>
+    </div>
+
+      <!-- 自动测试方法 -->
+    <div class="test-panel">
+          <!-- header -->
+          <div class="test-header">
+              <!-- TODO: title -->
+              <span>capture</span>
+              <!-- run -->
+              <div class="test-run" onclick="geobosTestList['capture']()">RUN</div>
+          </div>
+
+          <!-- TODO: 测试结果 -->
+          <div class="test-line">
+              <!-- 结果 -->
+              <span>测试结果:</span>
+              <!-- 命名以方法名开头Result结尾 -->
+              <!-- 请保留此字段:onclick="showResultDetails(this) -->
+              <div class="test-result" id="onCaptureResult" onclick="showResultDetails(this)"></div>
+          </div>
+
+          <!-- TODO: 提示区 -->
+          <!-- 根据需要添加 -->
+          <div class="test-line">
+              <p class="font-color-red">注：该方法测试截图功能。</p>
+          </div>
+          <div class="test-line">
+              <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+          </div>
+
+          <!-- 分割线 -->
+          <div class="divided-line"></div>
+      </div>
+
+      <!-- 自动测试方法 -->
+    <div class="test-panel">
+          <!-- header -->
+          <div class="test-header">
+              <!-- TODO: title -->
+              <span>startSaveVideo</span>
+              <!-- run -->
+              <div class="test-run" onclick="geobosTestList['startSaveVideo']()">RUN</div>
+          </div>
+
+          <!-- TODO: 测试结果 -->
+          <div class="test-line">
+              <!-- 结果 -->
+              <span>测试结果:</span>
+              <!-- 命名以方法名开头Result结尾 -->
+              <!-- 请保留此字段:onclick="showResultDetails(this) -->
+              <div class="test-result" id="onstartSaveVideoResult" onclick="showResultDetails(this)"></div>
+          </div>
+
+          <!-- TODO: 提示区 -->
+          <!-- 根据需要添加 -->
+          <div class="test-line">
+              <p class="font-color-red">注：该方法测试录制视频功能。</p>
+          </div>
+          <div class="test-line">
+              <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+          </div>
+
+          <!-- 分割线 -->
+          <div class="divided-line"></div>
+      </div>
+
+      <!-- 自动测试方法 -->
+    <div class="test-panel">
+          <!-- header -->
+          <div class="test-header">
+              <!-- TODO: title -->
+              <span>stopSaveVideo</span>
+              <!-- run -->
+              <div class="test-run" onclick="geobosTestList['stopSaveVideo']()">RUN</div>
+          </div>
+
+          <!-- TODO: 测试结果 -->
+          <div class="test-line">
+              <!-- 结果 -->
+              <span>测试结果:</span>
+              <!-- 命名以方法名开头Result结尾 -->
+              <!-- 请保留此字段:onclick="showResultDetails(this) -->
+              <div class="test-result" id="onstopSaveVideoResult" onclick="showResultDetails(this)"></div>
+          </div>
+
+          <!-- TODO: 提示区 -->
+          <!-- 根据需要添加 -->
+          <div class="test-line">
+              <p class="font-color-red">注：该方法测试结束录制视频功能。</p>
+          </div>
+          <div class="test-line">
+              <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+          </div>
+
+          <!-- 分割线 -->
+          <div class="divided-line"></div>
+      </div>
+
+      <!-- 自动测试方法 -->
+    <div class="test-panel">
+          <!-- header -->
+          <div class="test-header">
+              <!-- TODO: title -->
+              <span>startSpeed</span>
+              <!-- run -->
+              <div class="test-run" onclick="geobosTestList['startSpeed']()">RUN</div>
+          </div>
+
+          <!-- TODO: 测试结果 -->
+          <div class="test-line">
+              <!-- 结果 -->
+              <span>测试结果:</span>
+              <!-- 命名以方法名开头Result结尾 -->
+              <!-- 请保留此字段:onclick="showResultDetails(this) -->
+              <div class="test-result" id="onstartSpeedResult" onclick="showResultDetails(this)"></div>
+          </div>
+
+          <!-- TODO: 提示区 -->
+          <!-- 根据需要添加 -->
+          <div class="test-line">
+              <p class="font-color-red">注：该方法测试加速播放功能。</p>
+          </div>
+          <div class="test-line">
+              <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+          </div>
+
+          <!-- 分割线 -->
+          <div class="divided-line"></div>
+      </div>
+
+      <!-- 自动测试方法 -->
+    <div class="test-panel">
+          <!-- header -->
+          <div class="test-header">
+              <!-- TODO: title -->
+              <span>stopSpeed</span>
+              <!-- run -->
+              <div class="test-run" onclick="geobosTestList['stopSpeed']()">RUN</div>
+          </div>
+
+          <!-- TODO: 测试结果 -->
+          <div class="test-line">
+              <!-- 结果 -->
+              <span>测试结果:</span>
+              <!-- 命名以方法名开头Result结尾 -->
+              <!-- 请保留此字段:onclick="showResultDetails(this) -->
+              <div class="test-result" id="onstopSpeedResult" onclick="showResultDetails(this)"></div>
+          </div>
+
+          <!-- TODO: 提示区 -->
+          <!-- 根据需要添加 -->
+          <div class="test-line">
+              <p class="font-color-red">注：该方法测试停止加速播放功能。</p>
+          </div>
+          <div class="test-line">
+              <p class="font-color-yellow">Warning: 测试出现某种情况应怎么处理...</p>
+          </div>
+
+          <!-- 分割线 -->
+          <div class="divided-line"></div>
+      </div>
+
+  </div>
+
+  <!-- 显示结果详情面板 -->
+  <div id="test-result-panel" onclick="hideResultDetails()">
+    <!-- 显示面板 -->
+    <div id="test-result-details"></div>
+  </div>
+
+  <!-- 开始测试按钮 -->
+  <div class="footer" onclick="startTest()">开始测试</div>
+</body>
+
+</html>
